@@ -22,6 +22,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Create the SwiftUI view that provides the window contents.
         let contentView = ContentView()
 
+        /*
+         这部分内容就是标准的 iOS app 启动流程了。UIHostingController 是一个 UIViewController 子类，它将负责接受一个 SwiftUI 的 View 描述并将其用 UIKit 进行渲染 (在 iOS 下的情况)。UIHostingController 就是一个普通的 UIViewController，因此完全可以做到将 SwiftUI 创建的界面一点点集成到已有的 UIKit app 中，而并不需要从头开始就是基于 SwiftUI 的构建。
+         */
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)

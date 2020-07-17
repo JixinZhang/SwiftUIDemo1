@@ -7,10 +7,20 @@
 //
 
 import SwiftUI
+/*
+ 关于 some View
+ 
+ */
+
+var someCondition: Bool = false
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        TabView {
+            FirstView()
+            SecondView()
+        }
+        .font(.headline)
     }
 }
 
